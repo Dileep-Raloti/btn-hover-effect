@@ -1,0 +1,107 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+html ,body{
+    font-size: 0%;
+    text-decoration: none;
+    list-style-type: none;
+    overflow: hidden;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(0, 0, 0);
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+button{
+    padding: 30px 60px;
+    margin: 10px;
+    font-size: 20px;
+    text-transform: uppercase;
+    background-color:transparent;
+    color: aliceblue;
+    outline: none;
+    /* border-width: 5px; */
+    border: 1px solid rgba(20, 3, 95, 0.514);
+    position: relative;
+    overflow: hidden;
+    animation: mymove-color 2s  infinite ;cursor: pointer;
+}
+button:hover::after{
+    content: "";
+    position: absolute;
+    color: aliceblue;
+    width: 60%;
+    top: 90%;
+    left: 0%;
+    /* margin: -10px; */
+    background:rgb(255, 255, 255);
+    height: 2px;
+    animation: mymove 2s  infinite ;
+    cursor: pointer;
+}
+
+@keyframes mymove-color{
+    0%{ color: red;}
+    50%{color: green;}
+    70%{color: yellow;}
+    100%{color: turquoise;}
+}
+
+@keyframes mymove {
+    0% {
+        top: 0%;
+        left: 0%;
+        height: 2px;
+        width: 40%;
+        background-image: linear-gradient(red, yellow);
+    }
+
+    30% {
+        top:0%;
+        left: 98%;
+         height: 2px;
+        width: 40%;
+        background-image: linear-gradient(rgb(68, 0, 0), rgb(255, 60, 0));
+    }
+    32% {
+        top:0%;
+        left: 98%;
+         height: 52%;
+        width: 3px;
+        background-image: linear-gradient(rgb(156, 156, 156), rgb(224, 121, 36));
+    }
+    65% {
+        top: 95%;
+        left: 99%;
+         height: 60px;
+        width: 2px;
+        background-image: linear-gradient(rgb(233, 34, 34), rgb(63, 172, 20));
+    }
+
+    80% {
+        top: 95%;
+        left: 0%;
+         height: 2px;
+        width: 30%;background-image: linear-gradient(rgb(206, 126, 60), rgb(255, 174, 0));
+    }
+    85% {
+        top: 95%;
+        left: 0%;
+         height: 2px;
+        width: 2px;background-image: linear-gradient(rgb(70, 156, 135), yellow);
+    }
+    100% {
+        top: 0%;
+        left: 0%;
+         height: 60px;
+        width: 2px;background-image: linear-gradient(rgb(245, 92, 92), rgb(43, 255, 0));
+    }
+}
